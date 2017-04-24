@@ -1,6 +1,6 @@
 #############################################################
 ## Country Analysis by GDP and Income Group for 2012
-## Create by:    James Hosker
+## Create by:    James Hosker and Samuel Coyne
 ## SMU Course:   MSDS6306-402
 ## Date Created: 22-Apr-2017
 ## Last Update:  22-Apr-2017
