@@ -23,7 +23,7 @@ The URL with the code and our analysis is on the GitHub website:  [\textcolor{bl
 
 >1.  README:  This file provides instructions on how to run the R code and provides information in detail of each of the files in the GitHub repository.
 
->2.  RMakefile_CaseStudy2.R:  This file can be found in the Analysis sub-directory under the CaseStudy2 GitHub repository.   It is the main R makefile with the functions specifically called by this. 
+>2.  RMakefile_CaseStudy2.R:  This file can be found in the Analysis sub-directory under the CaseStudy2 GitHub repository.   It is the main R makefile with the function calls. 
 
 >3.  Makefile_GatherData.R:  This file can be found in the Analysis/Data sub-directory under CaseStudy2 GitHub repository.  This R makefile installs all required R-libraries and then loads the R-libraries.  Second, this R makefile uploads the TEMP.csv and CityTemp.csv data files with monthly average temperature data by country and by city, respectively.  This makefile also creates the raw data, and creates the cleaned datasets.   In cleaning the data, we read in the csv files; we remove NAs and blanks in the data; and we reformat the date data.  This makefile then saves all these datasets to the Analysis/Data sub-directory.
 
