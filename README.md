@@ -2,7 +2,7 @@
 ## Authors: Jim Hosker and Sam Coyne
 
 # Introduction
-### This repository for this case study accomplishes data cleaning, graphing, and analysis. Most of the analysis was conducted in R Studio (version 3.3.2) with the remaind in SAS on-demand (version 3.4) and Python (version 3.6.0). The purpose of this case study is to complete several analyses that touch on all aread covered in the course "Doing Data Science".   
+### This repository for this case study accomplishes data cleaning, graphing, and analysis. Most of the analysis was conducted in R Studio (version 3.3.2) with the remainder in SAS on-demand (version 3.4) and Python (version 3.6.0). The purpose of this case study is to complete several analyses that touch on all aread covered in the course "Doing Data Science".   
 
 # Running R Code
 ### 1. To run this R-code, download and clone this GitHub directory:  [\textcolor{blue}{https://github.com/jjhosker/CaseStudy2}](https://github.com/jjhosker/CaseStudy2.git).  Check to ensure the following files are downloaded and located in the directories indicated.  The two main files to execute are RMakefile_CaseStudy2.R for the analysis and CaseStudy2PDF.Rmd to generate the PDF file.
