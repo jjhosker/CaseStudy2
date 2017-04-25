@@ -15,19 +15,19 @@ knitr::opts_chunk$set(echo = TRUE)
 # Introduction
 This report answers 5 critical questions asked in Case Study 2 for MSDS 6306-402 (Thursday, 6:30 - 8:00 PM).
 
->    First, we will create and print out Matrix X in R, Python and SAS.  Second, we will calculate and plot the Automatic Data Processing (ADP) volatility decayed over 10, 30 and 100 days.  Third, we will calculate the mean and median circumference of five different trees; plot a scatterplot of trunk circumference vs. the age of the tree; and plot a boxplot of the tree type versus its circumferences.  Fourth, we will look at the maximum and minimum monthly average temperature over a period of years by Country ("TEMP.csv") and buy City ("Citytemp.csv"") and compare them.   We will examine the average monthly and yearly temperatures for the United States (US), converted from Celsius to Fahrenheit.  In addition, we will look at the difference between years.  Finally, we will plot using polar coordinates.  
+>    First, we will create and print out Matrix X in R, Python and SAS.  Second, we will calculate and plot the Automatic Data Processing (ADP) volatility decayed over 10, 30 and 100 days.  Third, we will calculate the mean and median circumference of five different trees; plot a scatterplot of trunk circumference vs. the age of the tree; and plot a boxplot of the tree type versus its circumferences.  Fourth, we will look at the maximum and minimum monthly average temperature over a period of years by Country ("TEMP.csv") and by City ("Citytemp.csv"") and compare them.   We will examine the average monthly and yearly temperatures for the United States (US), converted from Celsius to Fahrenheit.  In addition, we will look at the average temperature difference between years.  Finally, we will plot using polar coordinates.  
 
 # Folder Description
 
 The URL with the code and our analysis is on the GitHub website:  [\textcolor{blue}{https://github.com/jjhosker/CaseStudy2}](https://github.com/jjhosker/CaseStudy2.git).  It contains the following important files:
 
->1.  README:  this file provides instructions on how to run the R code and provides information in detail of each of the files in the GitHub repository.
+>1.  README:  This file provides instructions on how to run the R code and provides information in detail of each of the files in the GitHub repository.
 
 >2.  RMakefile_CaseStudy2.R:  This file can be found in the Analysis sub-directory under the CaseStudy2 GitHub repository.   It is the main R makefile with the functions specifically called by this. 
 
 >3.  Makefile_GatherData.R:  This file can be found in the Analysis/Data sub-directory under CaseStudy2 GitHub repository.  This R makefile installs all required R-libraries and then loads the R-libraries.  Second, this R makefile uploads the TEMP.csv and CityTemp.csv data files with monthly average temperature data by country and by city, respectively.  This makefile also creates the raw data, and creates the cleaned datasets.   In cleaning the data, we read in the csv files; we remove NAs and blanks in the data; and we reformat the date data.  This makefile then saves all these datasets to the Analysis/Data sub-directory.
 
->4.  RFunctions_CaseStudy2.R:  This file can be found in the Analysis sub-directory under the CaseStudy2 GitHub repository.   This file contains the functions that are loaded and used the main R makefile(RMakefile_CaseStudy2.R). 
+>4.  RFunctions_CaseStudy2.R:  This file can be found in the Analysis sub-directory under the CaseStudy2 GitHub repository.   This file contains functions that are loaded and used the main R makefile(RMakefile_CaseStudy2.R). 
 
 >5.  In addition to the two raw data sets, there are three data files created below and three PNG files which are loaded into the PDF file on creation.   In addition, we provide a text file (SessionsInfo.txt) containing all the R session information including the current R version and all the libraries and packages being utilized.  All the files below can be found in the Analysis/Data sub-directory under this GitHub repository.
 >     - Raw:  TEMP.csv
@@ -90,7 +90,7 @@ print(X)
 ![SAS Output Printing Matrix.](Analysis/Data/SAS_MatrixOutput.PNG)
 
 \newpage
-## Question #2: Please do the following with your assigned stock. 
+## Question #2: We do the following with your assigned stock:  ADP. 
 > The R code below prints the necessary information for creation of plot on volatility.   For more details in R, see R-code section for Question #2 in RMakefile_CaseStudy2.R.
 
 >   •	We downloaded the data for the stock Automatic Data Processing (ADP) from January 2000 to the current date and print out the graph below.
@@ -125,7 +125,7 @@ plot(x=ddates,y=ADPvol_10d,type="s",xlab="Date", ylab="Volatility (decayed)",
 ```
 
 \newpage
-## Question #3: Please do the following with your assigned stock:  ADP. 
+## Question #3: We perform the following on the Orange data set. 
 > The R code below prints the necessary information for creation of plots.   For more details in R, see R-code section for Question #3 in RMakefile_CaseStudy2.R.
 
 ###     Q#3.a:  Calculate the mean and the median of the trunk circumferences for different size of the trees. (Tree)
@@ -205,7 +205,7 @@ kable(TableFrame, format="pandoc", align='c',row.names = FALSE,
       caption = "Yearly Avg. Temperature for USA (1990-2013)")
 ## make a visual of yearly temp in US 
 visual3 <- ggplot(TableFrame, aes(x=Year, y=YearlyAvg)) + 
-  geom_point(size=3) + ylab("Temperatur (Fahrenheit)") + xlab("Year") + theme_bw() + 
+  geom_point(size=3) + ylab("Temperature (Fahrenheit)") + xlab("Year") + theme_bw() + 
   theme(panel.grid.major.x=element_blank(), panel.grid.minor.x = element_blank(), 
         panel.grid.major.y = element_line(colour="grey60", linetype="dashed")) +
   ggtitle("Fig. 9: Yearly Avg. Temperature for USA (1990-2013)")
